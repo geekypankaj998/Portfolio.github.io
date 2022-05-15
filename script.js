@@ -22,25 +22,26 @@ function helperFunct(targetSect,targetBlock,topDist){
       clearInterval(clearTok);
     }
     console.log(topDist);
-    scrollBy(0,30);
+    scrollBy(0,80);
   }
 
 }
 
-for(var itr=0;itr<listAnchorTags.length;itr++){
-  listAnchorTags[itr].addEventListener('click',function(e){
-    e.preventDefault();
-     sectionID = this.innerText.trim().toLowerCase();
-console.log(sectionID);
-    var  targetSect = document.getElementById(sectionID);
-    console.log(targetSect);
-    var targetBlock = targetSect.getBoundingClientRect();
-    console.log(targetBlock);
-    var topDist = targetBlock.top;
-    clearTok = setInterval(helperFunct,50,targetSect,targetBlock,topDist);
-  }                                   
-  );
-}
+// Code for scrolling effect
+// for(var itr=0;itr<listAnchorTags.length;itr++){
+//   listAnchorTags[itr].addEventListener('click',function(e){
+//     e.preventDefault();
+//      sectionID = this.innerText.trim().toLowerCase();
+// console.log(sectionID);
+//     var  targetSect = document.getElementById(sectionID);
+//     console.log(targetSect);
+//     var targetBlock = targetSect.getBoundingClientRect();
+//     console.log(targetBlock);
+//     var topDist = targetBlock.top;
+//     clearTok = setInterval(helperFunct,50,targetSect,targetBlock,topDist);
+//   }                                   
+//   );
+// }
 
 //Get the distance for the skill section from the top
 
